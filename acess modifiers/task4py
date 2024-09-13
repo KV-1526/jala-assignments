@@ -1,0 +1,31 @@
+class DefaultAccessClass:
+    def __init__(self, value):
+        self.value = value  # Default access (public) attribute
+
+    def display_value(self):
+        """
+        Public method to display the value.
+        """
+        print(f"Value: {self.value}")
+
+    def modify_value(self, new_value):
+        """
+        Public method to modify the value.
+        """
+        self.value = new_value
+
+# Creating an instance of DefaultAccessClass
+obj = DefaultAccessClass(20)
+
+# Accessing and displaying the public attribute directly
+print(f"Directly accessed value: {obj.value}")
+
+# Using public methods to interact with the public attribute
+obj.display_value()
+
+# Modifying the public attribute using a public method
+obj.modify_value(50)
+print(f"Updated value: {obj.value}")
+
+# Using public method to display the updated value
+obj.display_value()
